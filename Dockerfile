@@ -1,8 +1,8 @@
 #==============×==============#
-#      Created by: Alfa-Ex
-#=========× AyiinXd ×=========#
+#      Created by: ferdy-ubot
+#======> F-ubot <======#
 
-FROM ayiinxd/ayiin-userbot:buster
+FROM ferdihardiyansa/F-ubot:buster
 
 RUN git clone -b F-ubot https://github.com/ferdihardiyansa/F-ubot /home/F-ubot/ \
     && chmod 777 /home/F-ubot \
