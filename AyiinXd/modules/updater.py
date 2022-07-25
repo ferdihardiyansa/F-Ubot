@@ -10,7 +10,7 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from AyiinXd import CMD_HANDLER as cmd
-from AyiinXd import CMD_HELP, HEROKU_API_KEY, HEROKU_APP_NAME
+from AyiinXd import CMD_HELP, HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO_URL
 from AyiinXd.events import register
 from AyiinXd.ayiin import ayiin_cmd, eod, eor
 from Stringyins import get_string
@@ -129,10 +129,8 @@ async def upstream(event):
     else:
         xx = await eor(event, get_string("upd_1"))
     conf = event.pattern_match.group(1).strip()
-    off_repo = b64decode(
-        "aHR0cHM6Ly9naXRodWIuY29tL0F5aWluWGQvQXlpaW4tVXNlcmJvdA=="
-    ).decode("utf-8")
-    force_update = False
+    off_repo = UPSTREAM_REPO_URL
+    force_update = true
     try:
         txt = (get_string("upd_2")
         )
